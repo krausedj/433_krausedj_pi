@@ -14,3 +14,4 @@ xoscope
 
 - [2020-08-15:0100 Initial Stpes](./updates/202008150100/update.md)
 - [2020-08-16:0005 Cleaned Up Hardware](./updates/202008160005/update.md)
+- [2020-08-16:1730 Txing Data, VCD Files](./updates/202008161730/update.md)
