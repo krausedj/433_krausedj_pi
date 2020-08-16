@@ -21,9 +21,7 @@ class WaveListener(object):
         self.wave = Wave()
     
     def save(self, file_name):
-        with open(file_name, 'w') as file_ptr:
-            for point in self.wave.points:
-                file_ptr.write("{0},{1}\n".format(point.time_us,int(point.state)))
+        self.wave.save_csv(file_name)
         self.wave = Wave()
 
 wave_lis = WaveListener()
