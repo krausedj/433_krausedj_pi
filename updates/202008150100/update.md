@@ -1,6 +1,6 @@
 # Initial Steps
 
-I bought some cheap 433 MHz RX modules for use with the Pi off amazon.
+I bought some cheap 433 MHz RX modules for use with the Pi off amazon. *2020-08-19:2200, this is a super-regen, super het info [here](../202008192200/update.md)*
 
 ![rx module](./images/433mhz_module_display.jpg)
 
