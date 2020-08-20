@@ -4,7 +4,7 @@ from typing import Union, List
 @dataclass
 class Point(object):
     time_us: Union[int, float]
-    state: bool
+    state: int
 
 @dataclass
 class Wave(object):
@@ -19,7 +19,20 @@ class Wave(object):
     def save_csv(self, file_name: str):
         with open(file_name, 'w') as file_ptr:
             for point in self.points:
-                file_ptr.write("{0},{1}\n".format(point.time_us,int(point.state)))
+                file_ptr.write('{0},{1}\n'.format(point.time_us,int(point.state)))
+
+    def save_vcd(self, file_name: str):
+        with open(file_name, 'w') as file_ptr:
+            file_ptr.write('$timescale 1us $end\n')
+            file_ptr.write('$scope module logic $end\n')
+            file_ptr.write('$var wire 1 ! data $end\n')
+            file_ptr.write('$upscope $end\n')
+            file_ptr.write('$enddefinitions $end\n')
+            file_ptr.write('$dumpvars\n')
+            file_ptr.write('$x!\n')
+            file_ptr.write('$end\n')
+            for point in self.points:
+                file_ptr.write('#{0}\n{1}!\n'.format(point.time_us, point.state))
     
     @classmethod
     def load_csv(cls, file_name: str):
