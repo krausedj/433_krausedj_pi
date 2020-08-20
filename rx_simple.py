@@ -28,7 +28,7 @@ wave_lis = WaveListener()
 pi = pigpio.pi()
 pi.set_mode(17, pigpio.INPUT)
 pi.set_pull_up_down(17, pigpio.PUD_OFF)
-pi.set_glitch_filter(17, 20)
+pi.set_glitch_filter(17, 200)
 pi.callback(17, pigpio.EITHER_EDGE, wave_lis.rx_cbk)
 
 cmd = None
