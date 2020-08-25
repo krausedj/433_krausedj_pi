@@ -16,3 +16,4 @@ xoscope
 - [2020-08-16:0005 Cleaned Up Hardware](./updates/202008160005/update.md)
 - [2020-08-16:1730 Txing Data, VCD Files](./updates/202008161730/update.md)
 - [2020-08-19:2200 Superheterodyne vs Super-regenerative](./updates/202008192200/update.md)
+- [2020-08-24:2345 Installed Relay Box and Bomb Controller](./updates/202008242345/update.md)
